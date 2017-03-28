@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>inlämning2</title>
+    
+     <!--bootstrap-->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+     <script src="chatt.js"></script> 
+     <link rel="stylesheet" href="chatt.css">
+    <script src="moment.min.js"></script>
+ <script src="moment-with-locales.min.js"></script>
+    
+</head>
+<body>
+
+  
+    <!--inlogg-->
+    
+    <div class="container">
+
+    <h3 id="paragraf">Skriv in ditt namn!</h3><br><br>
+    
+<p>Förnamn: <input type="text" id="firstN" name="FirstName" value="Mickey"></p><br>
+<p>Efternamn: <input type="text" id="lastN" name="LastName" value="Mouse"></p><br>
+<button id="loggin">Logg in/ Skicka</button>
+    
+       
+        <!--utlogg-->
+        
+ <button id="loggut">Logga ut</button>
+
+    <br><br><br>
+
+    
+    
+    <!--chatt rutan-->
+   
+    
+    <textarea id="text" rows="4" cols="50">
+
+</textarea>
+      
+   
+  
+    <!--visa meddelanden-->
+    
+    <button id="view">Visa</button>
+  
+    
+
+<table class="table">
+  <thead class="thead-default">
+    <tr>
+      <th>Namn</th>
+      <th>Meddelande</th>
+      <th>Tid</th>
+      <th>ID</th>
+    </tr>
+  </thead>
+  <tbody id="table">
+    
+  </tbody>
+</table>
+    
+    
+   <!--firebase--> 
+    
+    <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
+<script>
+  
+  var config = {
+    apiKey: "AIzaSyBKzE2AFB1ocfX8Z0hGOQmITZH9U1RXaXY",
+    authDomain: "uppgift2-9c54a.firebaseapp.com",
+    databaseURL: "https://uppgift2-9c54a.firebaseio.com",
+    storageBucket: "uppgift2-9c54a.appspot.com",
+    messagingSenderId: "590547052745"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    </div>  
+</body>
+</html>
