@@ -25,11 +25,11 @@
     
     <div class="container">
 
-    <h3 id="paragraf">Skriv in ditt namn!</h3><br><br>
+    <h3 id="paragraf">Skriv ditt användarnamn!</h3><br><br>
     
-<p>Förnamn: <input type="text" id="firstN" name="FirstName" value="Mickey"></p><br>
-<p>Efternamn: <input type="text" id="lastN" name="LastName" value="Mouse"></p><br>
-<button id="loggin">Logg in/ Skicka</button>
+<p>Användarnamn: <input type="text" id="allName" name="FirstName" value=" "></p><br>
+<br>
+<button id="loggin">Logg in</button>
     
        
         <!--utlogg-->
@@ -44,18 +44,13 @@
    
     
     <textarea id="text" rows="4" cols="50">
+    </textarea>
+<button type="submit" id="submit" value="Submit">Submit</button>
 
-</textarea>
+
       
    
-  
-    <!--visa meddelanden-->
-    
-    <button id="view">Visa</button>
-  
-    
-
-<table class="table">
+  <table class="table">
   <thead class="thead-default">
     <tr>
       <th>Namn</th>
@@ -69,7 +64,7 @@
   </tbody>
 </table>
     
-    
+ </div>   
    <!--firebase--> 
     
     <script src="https://www.gstatic.com/firebasejs/3.7.2/firebase.js"></script>
