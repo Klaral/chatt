@@ -58,13 +58,13 @@ submit.addEventListener("click", function(event){
       
     })
     
-    /*text.value = "";*/        /*fb.ref('message/' + message.id).set(message);*/
     
-fb.ref().child("message").once("value",function(snapshot){
+    
+/*fb.ref().child("message").once("value",function(snapshot){
   var data = snapshot.val();
   var count = Object.keys(data).length;
   
-    });
+    });*/
     
 }); 
     
@@ -74,7 +74,7 @@ fb.ref().child("message").once("value",function(snapshot){
 submit.addEventListener("click", function(event){
     table.innerHTML = "";
     
-    firebase.database().ref('message/').once('value', function(snapshot) {
+    firebase.database().ref('message/').on('value', function(snapshot) {
 	var allData = snapshot.val();
 	   Object.keys(allData).reverse().forEach(function(key){
     var message = allData[key];
@@ -83,8 +83,7 @@ submit.addEventListener("click", function(event){
 tr.innerHTML = `<td>${message.name}</td>
 <td>${message.meddelande}</td> <td>${message.time}</td> <td>${message.id}</td>`
             table.appendChild(tr);
-           /*message.name + "<td>" + message.meddelande + "<td>" + message.time + "<td>" + message.id;
-           table.appendChild(tr);*/
+           
            
         
         }) 
